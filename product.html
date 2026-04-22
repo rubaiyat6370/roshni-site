@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — Roshni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="announce">
+  <div class="announce-track">
+    <span>Free shipping on orders over $150 CAD</span>
+    <span>Designed in Hamilton · Ethically made</span>
+    <span>Now shipping across Canada</span>
+    <span>Free shipping on orders over $150 CAD</span>
+    <span>Designed in Hamilton · Ethically made</span>
+    <span>Now shipping across Canada</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="journal.html">Journal</a></li>
+    </ul>
+    <button class="hamburger" data-open-menu aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <a class="nav-brand" href="index.html">Roshni<span class="dot">.</span><span class="nav-brand-sub">The Label</span></a>
+    <div class="nav-actions">
+      <button class="icon-btn" data-open-cart aria-label="Bag">
+        <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7zM9 7a3 3 0 016 0"/></svg>
+        <span class="cart-count" data-cart-count data-count="0">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a><span>/</span>
+    <a href="shop.html">Shop</a><span>/</span>
+    <span id="bc-product">Product</span>
+  </div>
+
+  <div class="pdp" id="pdp">
+    <!-- populated by JS -->
+  </div>
+
+  <div class="section-sm" style="border-top: 1px solid var(--line); padding-top: 4rem;">
+    <div class="section-head">
+      <div class="eyebrow">Pairs Well With</div>
+      <h2 style="font-size: 2rem;">Complete the look</h2>
+    </div>
+    <div class="product-grid" id="related-grid"></div>
+  </div>
+</div>
+
+<section class="newsletter">
+  <div class="container">
+    <div class="eyebrow" style="color: var(--gold);">The Mailing List</div>
+    <h2 style="margin-top: 1rem;">Be the first through the door.</h2>
+    <p>Launch updates, new colours, and notes from behind the seams.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" required placeholder="you@yourinbox.com" />
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Roshni<span class="dot">.</span></h3>
+        <p>A Canadian medical apparel label. Designed in Hamilton, Ontario. Ethically made in Dhaka, Bangladesh.</p>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html?cat=tops">Tops</a></li>
+          <li><a href="shop.html?cat=bottoms">Bottoms</a></li>
+          <li><a href="shop.html?cat=sets">Sets</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Label</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ethics.html">Ethics</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <ul>
+          <li><a href="contact.html">Size Guide</a></li>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Care</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Roshni The Label. Hamilton, ON.</span>
+      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" data-close-menu aria-label="Close menu">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+  </button>
+  <ul>
+    <li><a href="shop.html" data-close-menu>Shop</a></li>
+    <li><a href="about.html" data-close-menu>About</a></li>
+    <li><a href="ethics.html" data-close-menu>Ethics</a></li>
+    <li><a href="journal.html" data-close-menu>Journal</a></li>
+    <li><a href="contact.html" data-close-menu>Contact</a></li>
+  </ul>
+</div>
+
+<div class="overlay" id="overlay" data-close-cart></div>
+<aside class="drawer" id="cart-drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Your Bag</h3>
+    <button class="drawer-close" data-close-cart aria-label="Close">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot"></div>
+</aside>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const slug = new URLSearchParams(window.location.search).get('p') || 'lumen-top';
+  const product = findProduct(slug) || PRODUCTS[0];
+  document.title = `${product.name} — Roshni`;
+  document.getElementById('bc-product').textContent = product.name;
+
+  let selectedColor = product.colors[0];
+  let selectedSize = null;
+  let qty = 1;
+
+  function render() {
+    const colorObj = COLORS[selectedColor];
+    const colorsHTML = product.colors.map(c => `
+      <button class="color-btn ${c === selectedColor ? 'active' : ''}"
+              style="background: ${COLORS[c].hex}"
+              data-color="${c}"
+              aria-label="${COLORS[c].name}"
+              title="${COLORS[c].name}"></button>
+    `).join('');
+
+    const sizesHTML = product.sizes.map(s => `
+      <button class="size-btn ${s === selectedSize ? 'active' : ''} ${product.oosSizes.includes(s) ? 'oos' : ''}"
+              data-size="${s}"
+              ${product.oosSizes.includes(s) ? 'disabled' : ''}>${s}</button>
+    `).join('');
+
+    const priceHTML = product.originalPrice
+      ? `${formatPrice(product.price)} <span style="color: var(--muted); text-decoration: line-through; font-size: 1rem; font-weight: 400;">${formatPrice(product.originalPrice)}</span>`
+      : formatPrice(product.price);
+
+    document.getElementById('pdp').innerHTML = `
+      <div class="pdp-gallery">
+        <div class="pdp-main">
+          ${garmentSVG(product.type === 'set' ? 'top' : product.type, selectedColor)}
+        </div>
+        <div class="pdp-thumbs">
+          <div class="pdp-thumb active">${garmentSVG(product.type === 'set' ? 'top' : product.type, selectedColor)}</div>
+          ${product.type === 'set' ? `<div class="pdp-thumb">${garmentSVG('pant', selectedColor)}</div>` : ''}
+          ${product.colors.filter(c => c !== selectedColor).slice(0, 3).map(c => `
+            <div class="pdp-thumb" onclick="selectColor('${c}')">${garmentSVG(product.type === 'set' ? 'top' : product.type, c)}</div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="pdp-info">
+        <div class="eyebrow">${product.subtitle}</div>
+        <h1>${product.name}</h1>
+        <p class="sub">${product.description.split('.')[0]}.</p>
+        <div class="pdp-price">${priceHTML}</div>
+
+        <div class="pdp-option">
+          <div class="pdp-option-label"><span>Colour</span><span>${colorObj.name}</span></div>
+          <div class="color-options">${colorsHTML}</div>
+        </div>
+
+        <div class="pdp-option">
+          <div class="pdp-option-label">
+            <span>Size</span>
+            <span style="cursor:pointer;text-decoration:underline;" onclick="showToast('Size guide coming soon.')">Size Guide</span>
+          </div>
+          <div class="size-options">${sizesHTML}</div>
+        </div>
+
+        <div class="pdp-option">
+          <div class="pdp-option-label"><span>Quantity</span></div>
+          <div class="quantity">
+            <button onclick="adjustQty(-1)" aria-label="Decrease">−</button>
+            <input type="text" value="${qty}" readonly />
+            <button onclick="adjustQty(1)" aria-label="Increase">+</button>
+          </div>
+        </div>
+
+        <div class="pdp-cta">
+          <button class="btn btn-primary" onclick="handleAddToCart()">Add to Bag — ${formatPrice(product.price * qty)}</button>
+        </div>
+
+        <div class="pdp-ship">
+          <svg viewBox="0 0 24 24"><path d="M3 7h13v10H3zM16 10h4l2 3v4h-6zM7 20a2 2 0 100-4 2 2 0 000 4zM18 20a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          Free Canadian shipping on orders over $150. Free returns within 30 days.
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item open">
+            <button class="accordion-head">Description<span class="plus">+</span></button>
+            <div class="accordion-body">${product.description}</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">Features<span class="plus">+</span></button>
+            <div class="accordion-body">
+              <ul style="list-style: none; padding: 0;">
+                ${product.features.map(f => `<li style="padding: 0.35rem 0; border-bottom: 1px dashed var(--line);">· ${f}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">Fabric<span class="plus">+</span></button>
+            <div class="accordion-body">${product.fabric}</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">Fit<span class="plus">+</span></button>
+            <div class="accordion-body">${product.fit}</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-head">Care<span class="plus">+</span></button>
+            <div class="accordion-body">${product.care}</div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Rebind accordion (since DOM replaced)
+    document.querySelectorAll('.accordion-head').forEach(head => {
+      head.addEventListener('click', () => head.closest('.accordion-item').classList.toggle('open'));
+    });
+
+    // Color buttons
+    document.querySelectorAll('.color-btn').forEach(b => {
+      b.addEventListener('click', () => selectColor(b.dataset.color));
+    });
+    // Size buttons
+    document.querySelectorAll('.size-btn:not([disabled])').forEach(b => {
+      b.addEventListener('click', () => { selectedSize = b.dataset.size; render(); });
+    });
+  }
+
+  function selectColor(c) { selectedColor = c; render(); }
+  function adjustQty(delta) { qty = Math.max(1, qty + delta); render(); }
+
+  function handleAddToCart() {
+    if (!selectedSize) { showToast('Please select a size.'); return; }
+    addToCart({ slug: product.slug, color: selectedColor, size: selectedSize, qty });
+    qty = 1; render();
+  }
+
+  render();
+
+  // Related products (everything else except this one, limit 4)
+  renderProductGrid('related-grid', p => p.slug !== product.slug);
+</script>
+</body>
+</html>

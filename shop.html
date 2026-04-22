@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop the Collection — Roshni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="announce">
+  <div class="announce-track">
+    <span>Free shipping on orders over $150 CAD</span>
+    <span>Designed in Hamilton · Ethically made</span>
+    <span>Now shipping across Canada</span>
+    <span>Free shipping on orders over $150 CAD</span>
+    <span>Designed in Hamilton · Ethically made</span>
+    <span>Now shipping across Canada</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="journal.html">Journal</a></li>
+    </ul>
+    <button class="hamburger" data-open-menu aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <a class="nav-brand" href="index.html">Roshni<span class="dot">.</span><span class="nav-brand-sub">The Label</span></a>
+    <div class="nav-actions">
+      <button class="icon-btn" data-open-cart aria-label="Bag">
+        <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7L6 7zM9 7a3 3 0 016 0"/></svg>
+        <span class="cart-count" data-cart-count data-count="0">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">The Collection</div>
+    <h1>Every piece, every colour.</h1>
+    <p>Our launch capsule — six considered pieces for the healthcare professional who expects more from a shift.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="shop-layout">
+    <aside class="shop-filters">
+      <div class="filter-group">
+        <h5>Category</h5>
+        <ul id="filter-category">
+          <li class="active" data-cat="all">All <span id="count-all">6</span></li>
+          <li data-cat="tops">Tops <span id="count-tops">2</span></li>
+          <li data-cat="bottoms">Bottoms <span id="count-bottoms">2</span></li>
+          <li data-cat="sets">Sets <span id="count-sets">1</span></li>
+          <li data-cat="layers">Layers <span id="count-layers">1</span></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h5>Colour</h5>
+        <ul>
+          <li><span style="display:inline-flex;align-items:center;gap:0.5rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#0B1F2F"></span>Ink</span></li>
+          <li><span style="display:inline-flex;align-items:center;gap:0.5rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#121212"></span>Onyx</span></li>
+          <li><span style="display:inline-flex;align-items:center;gap:0.5rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#2A4738"></span>Forest</span></li>
+          <li><span style="display:inline-flex;align-items:center;gap:0.5rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#4A5560"></span>Slate</span></li>
+          <li><span style="display:inline-flex;align-items:center;gap:0.5rem;"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#E4DDCC;border:1px solid var(--line)"></span>Bone</span></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h5>Size</h5>
+        <ul>
+          <li>XS</li>
+          <li>S</li>
+          <li>M</li>
+          <li>L</li>
+          <li>XL</li>
+          <li>2XL</li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h5>Price</h5>
+        <ul>
+          <li>Under $50</li>
+          <li>$50 – $75</li>
+          <li>$75 – $100</li>
+          <li>$100 +</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div>
+      <div class="shop-toolbar">
+        <span id="shop-count">Showing all 6 pieces</span>
+        <div class="shop-sort">
+          <label for="sort">Sort:</label>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price — Low to High</option>
+            <option value="price-desc">Price — High to Low</option>
+            <option value="name">Name — A to Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="shop-grid"></div>
+    </div>
+  </div>
+</div>
+
+<section class="newsletter">
+  <div class="container">
+    <div class="eyebrow" style="color: var(--gold);">The Mailing List</div>
+    <h2 style="margin-top: 1rem;">Be the first through the door.</h2>
+    <p>Launch updates, new colours, and notes from behind the seams.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" required placeholder="you@yourinbox.com" />
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Roshni<span class="dot">.</span></h3>
+        <p>A Canadian medical apparel label. Designed in Hamilton, Ontario. Ethically made in Dhaka, Bangladesh.</p>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html?cat=tops">Tops</a></li>
+          <li><a href="shop.html?cat=bottoms">Bottoms</a></li>
+          <li><a href="shop.html?cat=sets">Sets</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Label</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ethics.html">Ethics</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <ul>
+          <li><a href="contact.html">Size Guide</a></li>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Care</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Roshni The Label. Hamilton, ON.</span>
+      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" data-close-menu aria-label="Close menu">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+  </button>
+  <ul>
+    <li><a href="shop.html" data-close-menu>Shop</a></li>
+    <li><a href="about.html" data-close-menu>About</a></li>
+    <li><a href="ethics.html" data-close-menu>Ethics</a></li>
+    <li><a href="journal.html" data-close-menu>Journal</a></li>
+    <li><a href="contact.html" data-close-menu>Contact</a></li>
+  </ul>
+</div>
+
+<div class="overlay" id="overlay" data-close-cart></div>
+<aside class="drawer" id="cart-drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Your Bag</h3>
+    <button class="drawer-close" data-close-cart aria-label="Close">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot"></div>
+</aside>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // Counts
+  const totals = { all: PRODUCTS.length };
+  ['tops','bottoms','sets','layers'].forEach(c => {
+    totals[c] = PRODUCTS.filter(p => p.category === c).length;
+    const el = document.getElementById('count-' + c); if (el) el.textContent = totals[c];
+  });
+  document.getElementById('count-all').textContent = totals.all;
+
+  let currentCat = new URLSearchParams(window.location.search).get('cat') || 'all';
+  let currentSort = 'featured';
+
+  // mark active tab if arriving from footer
+  document.querySelectorAll('#filter-category li').forEach(li => {
+    if (li.dataset.cat === currentCat) {
+      document.querySelectorAll('#filter-category li').forEach(l => l.classList.remove('active'));
+      li.classList.add('active');
+    }
+    li.addEventListener('click', () => {
+      document.querySelectorAll('#filter-category li').forEach(l => l.classList.remove('active'));
+      li.classList.add('active');
+      currentCat = li.dataset.cat;
+      render();
+    });
+  });
+
+  document.getElementById('sort').addEventListener('change', (e) => {
+    currentSort = e.target.value;
+    render();
+  });
+
+  function render() {
+    let items = PRODUCTS.slice();
+    if (currentCat !== 'all') items = items.filter(p => p.category === currentCat);
+
+    switch (currentSort) {
+      case 'price-asc': items.sort((a,b) => a.price - b.price); break;
+      case 'price-desc': items.sort((a,b) => b.price - a.price); break;
+      case 'name': items.sort((a,b) => a.name.localeCompare(b.name)); break;
+      default: items.sort((a,b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    }
+
+    document.getElementById('shop-grid').innerHTML = items.map(productCardHTML).join('');
+    document.getElementById('shop-count').textContent = `Showing ${items.length} ${items.length === 1 ? 'piece' : 'pieces'}`;
+  }
+
+  render();
+</script>
+</body>
+</html>
