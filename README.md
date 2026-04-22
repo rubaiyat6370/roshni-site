@@ -1,4 +1,4 @@
-# Roshni — The Label
+# Roshni
 
 A brand prototype for a premium Canadian medical scrub label, designed in Hamilton, Ontario.
 
